@@ -236,6 +236,22 @@
         <bendingNode minX="-0.35" maxX="0.35" minZ="1" maxZ="2.2" yOffset="0.4"/>
     </foliageBending>
     
+	
+    <tensionBelts>
+        <tensionBeltsConfigurations>
+            <tensionBeltsConfiguration>
+                <tensionBelts linkNode="tensionbelts" jointNode="0>" width="0.075" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0.1" defaultOffsetSide="0.1" defaultHeight="4" activationTrigger="beltActivationTrigger">
+                    <tensionBelt startNode="tensionBeltStart1" endNode="tensionBeltEnd1" />
+                    <tensionBelt startNode="tensionBeltStart2" endNode="tensionBeltEnd2" />
+                    <tensionBelt startNode="tensionBeltStart3" endNode="tensionBeltEnd3" />
+                    <tensionBelt startNode="tensionBeltStart4" endNode="tensionBeltEnd4" />
+                    <tensionBelt startNode="tensionBeltStart5" endNode="tensionBeltEnd5" />
+                    <tensionBelt startNode="tensionBeltStart6" endNode="tensionBeltEnd6" />
+                </tensionBelts>
+            </tensionBeltsConfiguration>
+        </tensionBeltsConfigurations>
+    </tensionBelts>
+	
 	<baseMaterial>
         <material name="kk301827H_mat" baseNode="kk301827H_vis">
             <shaderParameter name="colorMat0" value="0.8550 0.8550 0.8550 0"/>
@@ -379,6 +395,22 @@
 		
         <i3dMapping id="licensePlateBack" 			node="0>0|5"/>
 		
-        <i3dMapping id="DennisK_01" 			node="0>0|6|3|0"/>
+        <i3dMapping id="DennisK_01" 				node="0>0|6|3|0"/>
+		
+        <i3dMapping id="tensionbelts" 				node="0>0|7"/>
+        <i3dMapping id="beltActivationTrigger" 		node="0>0|7|0"/>
+        <i3dMapping id="tensionBeltStart1" 			node="0>0|7|1"/>
+        <i3dMapping id="tensionBeltEnd1" 			node="0>0|7|1|0"/>
+        <i3dMapping id="tensionBeltStart2" 			node="0>0|7|2"/>
+        <i3dMapping id="tensionBeltEnd2" 			node="0>0|7|2|0"/>
+        <i3dMapping id="tensionBeltStart3" 			node="0>0|7|3"/>
+        <i3dMapping id="tensionBeltEnd3" 			node="0>0|7|3|0"/>
+        <i3dMapping id="tensionBeltStart4" 			node="0>0|7|4"/>
+        <i3dMapping id="tensionBeltEnd4" 			node="0>0|7|4|0"/>
+        <i3dMapping id="tensionBeltStart5" 			node="0>0|7|5"/>
+        <i3dMapping id="tensionBeltEnd5" 			node="0>0|7|5|0"/>
+        <i3dMapping id="tensionBeltStart6" 			node="0>0|7|6"/>
+        <i3dMapping id="tensionBeltEnd6" 			node="0>0|7|6|0"/>
+		
     </i3dMappings>
 </vehicle>
