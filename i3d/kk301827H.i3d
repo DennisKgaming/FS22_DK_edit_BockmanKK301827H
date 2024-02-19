@@ -224,6 +224,8 @@
       <Texture fileId="43"/>
       <Emissivemap fileId="43"/>
     </Material>
+    <Material name="UnnamedMaterial" materialId="449" diffuseColor="1 1 1 1">
+    </Material>
     <Material name="warnSign" materialId="32">
       <Texture fileId="43"/>
     </Material>
@@ -639,7 +641,7 @@
             </TransformGroup>
           </TransformGroup>
           <TransformGroup name="tensionbelts" translation="0.035 0.583 -0.409" rotation="0 -0 1.88905e-12" nodeId="415">
-            <Shape shapeId="42" name="beltActivationTrigger" translation="-0.000292796 1.05172 -0.210118" rotation="0 -0 -0.0625573" scale="0.613045 0.483914 1" static="true" collisionMask="1048576" nodeId="424" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="42" name="beltActivationTrigger" translation="-0.000292796 1.05172 -0.210118" rotation="0 -0 -0.0625573" scale="0.613045 0.483914 1" static="true" trigger="true" collisionMask="1048576" nodeId="424" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
             <TransformGroup name="tensionBeltStart1" translation="0.840564 0.0439439 1" rotation="0 -90 0" nodeId="416">
               <TransformGroup name="tensionBeltEnd1" translation="0 0 1.7394" nodeId="417">
                 <Shape shapeId="43" name="loop_vis" rotation="0 90 0" clipDistance="300" nodeId="418" materialIds="411" castsShadows="true" receiveShadows="true"/>
@@ -677,13 +679,20 @@
               <Shape shapeId="43" name="loop_vis" rotation="0 90 0" clipDistance="300" nodeId="444" materialIds="411" castsShadows="true" receiveShadows="true"/>
             </TransformGroup>
           </TransformGroup>
+          <TransformGroup name="autoLoad" translation="0 -2.35792e-16 0" nodeId="445">
+            <TransformGroup name="loadingBase" translation="-0.0339997 0.632275 0.809844" nodeId="446"/>
+            <Shape shapeId="44" name="loadTrigger" translation="0 1.57925 -0.646483" scale="1.75 1.9 2.9" kinematic="true" trigger="true" nodeId="448" materialIds="449" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="44" name="pickupTriggerLeft" translation="2.17577 0.977319 -0.646483" scale="1.75 1.9 2.9" kinematic="true" trigger="true" collisionMask="1092616192" nodeId="450" materialIds="449" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="44" name="pickupTriggerRight" translation="-2.176 0.977319 -0.646483" scale="1.75 1.9 2.9" kinematic="true" trigger="true" collisionMask="1092616192" nodeId="451" materialIds="449" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="44" name="pickupTriggerBack" translation="0 0.977319 -3.71106" scale="1.75 1.9 2.9" kinematic="true" trigger="true" collisionMask="1092616192" nodeId="452" materialIds="449" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </TransformGroup>
         </Shape>
         <TransformGroup name="collisions" nodeId="404">
-          <Shape shapeId="44" name="colPart01" translation="0.94062 1.53432 -0.619279" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="405" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
-          <Shape shapeId="44" name="colPart02" translation="-0.941 1.53432 -0.619279" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="406" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
-          <Shape shapeId="45" name="colPart03" translation="-3.34911e-16 1.53432 0.889027" rotation="0 90 0" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="407" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
-          <Shape shapeId="46" name="colPart04" translation="-7.50361e-16 2.59413 -0.611729" rotation="-90 0 -90" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="408" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
-          <Shape shapeId="47" name="colPart05" translation="0 0.467637 1.29592" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="409" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="45" name="colPart01" translation="0.94062 1.53432 -0.619279" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="405" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="45" name="colPart02" translation="-0.941 1.53432 -0.619279" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="406" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="46" name="colPart03" translation="-3.34911e-16 1.53432 0.889027" rotation="0 90 0" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="407" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="47" name="colPart04" translation="-7.50361e-16 2.59413 -0.611729" rotation="-90 0 -90" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="408" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="48" name="colPart05" translation="0 0.467637 1.29592" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="409" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
         </TransformGroup>
       </Shape>
   </Scene>

@@ -21,6 +21,12 @@
 	
 	<multiplayer supported="true"/>
 	
+	<vehicleTypes>
+		<type name="PalletAutoLoaderDynMATrailer" parent="trailer" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="FS22_aPalletAutoLoader.aPalletAutoLoader"/>
+		</type>
+	</vehicleTypes>	
+	
 	<extraSourceFiles>
         <sourceFile filename="scripts/categorizer.lua"/>
     </extraSourceFiles>

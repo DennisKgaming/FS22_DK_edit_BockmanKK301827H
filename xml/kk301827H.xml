@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<vehicle type="dynamicMountAttacherTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+<vehicle type="PalletAutoLoaderDynMATrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 	
 	<storeData>
@@ -252,6 +252,29 @@
         </tensionBeltsConfigurations>
     </tensionBelts>
 	
+	<aPalletAutoLoader>
+		<aPalletAutoLoaderConfigurations title="$l10n_function_PalletAutoload_Trailer">
+		
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
+			</aPalletAutoLoaderConfiguration>
+		
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_PalletAutoload_Trailer" maxObjects="80" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-3 0 0" UnloadLeftOffset="3 0 0">
+				<trigger node="loadTrigger"/>
+				<pickupTriggers>
+					<pickupTrigger node="pickupTriggerLeft"/>
+					<pickupTrigger node="pickupTriggerRight"/>
+					<pickupTrigger node="pickupTriggerBack"/>
+				</pickupTriggers>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="0.875 0 0" lenght="2.9" width="1.75" height="1.90"/>
+                <!-- <autoLoadObjectSettings>
+                    <autoLoadObjectSetting name="squarebale120" maxObjects="90"/>
+                </autoLoadObjectSettings> -->
+			</aPalletAutoLoaderConfiguration>
+			
+		</aPalletAutoLoaderConfigurations>
+        
+	</aPalletAutoLoader>
+	
 	<baseMaterial>
         <material name="kk301827H_mat" baseNode="kk301827H_vis">
             <shaderParameter name="colorMat0" value="0.8550 0.8550 0.8550 0"/>
@@ -411,6 +434,13 @@
         <i3dMapping id="tensionBeltEnd5" 			node="0>0|7|5|0"/>
         <i3dMapping id="tensionBeltStart6" 			node="0>0|7|6"/>
         <i3dMapping id="tensionBeltEnd6" 			node="0>0|7|6|0"/>
+		
+        <i3dMapping id="autoLoad" 					node="0>0|8"/>
+        <i3dMapping id="loadingBase" 				node="0>0|8|0"/>
+        <i3dMapping id="loadTrigger" 				node="0>0|8|1"/>
+        <i3dMapping id="pickupTriggerLeft" 			node="0>0|8|2"/>
+        <i3dMapping id="pickupTriggerRight" 		node="0>0|8|3"/>
+        <i3dMapping id="pickupTriggerBack" 			node="0>0|8|4"/>
 		
     </i3dMappings>
 </vehicle>
