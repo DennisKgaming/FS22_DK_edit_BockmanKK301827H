@@ -253,12 +253,12 @@
     </tensionBelts>
 	
 	<aPalletAutoLoader>
-		<aPalletAutoLoaderConfigurations title="$l10n_function_PalletAutoload_Trailer">
+		<aPalletAutoLoaderConfigurations title="Autoload">
 		
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
+			<aPalletAutoLoaderConfiguration name="No autoload">
 			</aPalletAutoLoaderConfiguration>
 		
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_PalletAutoload_Trailer" maxObjects="80" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-3 0 0" UnloadLeftOffset="3 0 0">
+			<aPalletAutoLoaderConfiguration name="Use autoload" maxObjects="80" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-3 0 0" UnloadLeftOffset="3 0 0">
 				<trigger node="loadTrigger"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
